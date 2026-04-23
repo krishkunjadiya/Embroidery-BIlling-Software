@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>IPC Test</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    button { padding: 10px; margin: 10px 0; }
+    #result { margin-top: 20px; padding: 10px; border: 1px solid #ccc; min-height: 50px; }
+  </style>
+</head>
+<body>
+  <h1>IPC Test</h1>
+  <button id="testButton">Test Select Folder</button>
+  <div id="result">Results will appear here</div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log('Page loaded');
+      
+      const resultDiv = document.getElementById('result');
+      const testButton = document.getElementById('testButton');
+      
+      console.log('Window.electron:', window.electron);
+      
+      testButton.addEventListener('click', async () => {
+        console.log('Button clicked');
+        resultDiv.textContent = 'Calling selectFolder...';
+        
+        try {
+          const path = await window.electron.selectFolder();
+          console.log('Result:', path);
+          resultDiv.textContent = `Selected path: ${path}`;
+        } catch (error) {
+          console.error('Error:', error);
+          resultDiv.textContent = `Error: ${error.message || error}`;
+        }
+      });
+    });
+  </script>
+</body>
+</html> 
