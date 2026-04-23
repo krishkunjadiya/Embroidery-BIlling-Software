@@ -104,6 +104,22 @@ Note: `npm run build` currently fails with static export because the app include
 a dynamic route at `src/app/bills/[billId]`. If you want full static export,
 you will need to refactor dynamic routing or implement static params generation.
 
+## Known Limitations
+
+- Static export is currently incompatible with dynamic bill detail routing.
+- Data persistence is local-only (browser/Electron localStorage) with no cloud sync.
+- No authentication or role-based access control is implemented.
+- No automated unit/integration/end-to-end test suite is included yet.
+- Lint passes with warnings that still need incremental cleanup.
+- Data is not encrypted at rest by default in localStorage.
+- Report/filter performance may degrade with very large local datasets.
+
+## GitHub Issues
+
+This repository uses structured GitHub Issue Forms for bug reports and feature requests.
+Please use the appropriate form in the Issues tab and provide clear reproduction steps,
+expected behavior, and environment details.
+
 ## Contributing
 
 Open an issue or pull request with a clear summary, scope, and validation details.

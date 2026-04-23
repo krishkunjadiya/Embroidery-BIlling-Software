@@ -1,0 +1,64 @@
+name: Bug report
+description: Report a reproducible problem
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Please fill in as much detail as possible.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Briefly describe the problem.
+      placeholder: The invoice total is incorrect when...
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Provide exact steps.
+      placeholder: |
+        1. Go to Bills
+        2. Create a bill with...
+        3. Click Save
+        4. Observe error
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      placeholder: The total should be...
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      placeholder: The app shows...
+    validations:
+      required: true
+  - type: input
+    id: app_mode
+    attributes:
+      label: App mode
+      description: Web, Electron, or both
+      placeholder: Electron
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Node, npm, Electron versions
+      placeholder: Windows 11, Node 20.x, npm 10.x, Electron 36.x
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or screenshots
+      description: Paste stack trace or attach screenshots if available

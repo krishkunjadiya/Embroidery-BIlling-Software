@@ -1,0 +1,55 @@
+name: Feature request
+description: Suggest an enhancement for the project
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the suggestion. Please explain the use case and expected value.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem statement
+      description: What pain point are you trying to solve?
+      placeholder: It is difficult to...
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe your ideal solution.
+      placeholder: Add a setting that...
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Any alternatives or workarounds?
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Billing
+        - Customers
+        - Reports
+        - Profile
+        - Settings
+        - PDF Export
+        - Electron/Desktop
+        - Developer Experience
+    validations:
+      required: true
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      options:
+        - Low
+        - Medium
+        - High
+    validations:
+      required: true
