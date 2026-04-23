@@ -106,11 +106,11 @@ you will need to refactor dynamic routing or implement static params generation.
 
 ## Contributing
 
-Please read `CONTRIBUTING.md` before submitting pull requests.
+Open an issue or pull request with a clear summary, scope, and validation details.
 
 ## Security
 
-Please read `SECURITY.md` for responsible disclosure.
+Report security concerns privately through GitHub Security Advisories.
 
 ## License
 

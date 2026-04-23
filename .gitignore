@@ -48,6 +48,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# markdown docs
+*.md
+!/README.md
+
 .genkit/*
 .env*
 !.env.example
